@@ -246,14 +246,14 @@
         }
     },
     "variables": {
-        "publicIpTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/publicip-new.json', parameters('_artifactsLocationSasToken')))]",
-        "netTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/vnet-new.json', parameters('_artifactsLocationSasToken')))]",
-        "storageTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/storageAccount-new.json', parameters('_artifactsLocationSasToken')))]",
-        "availabilitySetTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/availabilitySet-new.json', parameters('_artifactsLocationSasToken')))]",
-        "networkSecurityGroupTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/networkSecurityGroup-new.json', parameters('_artifactsLocationSasToken')))]",
-        "interfaceWanTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/interface-wan.json', parameters('_artifactsLocationSasToken')))]",
-        "interfaceLanTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/interface-lan.json', parameters('_artifactsLocationSasToken')))]",
-        "vmTemplate": "[uri(parameters('_artifactsLocation'), concat('nestedtemplates/vm.json', parameters('_artifactsLocationSasToken')))]",
+        "publicIpTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/publicip-new.json', parameters('_artifactsLocationSasToken')))]",
+        "netTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/vnet-new.json', parameters('_artifactsLocationSasToken')))]",
+        "storageTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/storageAccount-new.json', parameters('_artifactsLocationSasToken')))]",
+        "availabilitySetTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/availabilitySet-new.json', parameters('_artifactsLocationSasToken')))]",
+        "networkSecurityGroupTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/networkSecurityGroup-new.json', parameters('_artifactsLocationSasToken')))]",
+        "interfaceWanTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/interface-wan.json', parameters('_artifactsLocationSasToken')))]",
+        "interfaceLanTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/interface-lan.json', parameters('_artifactsLocationSasToken')))]",
+        "vmTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg'), concat('nestedtemplates/vm.json', parameters('_artifactsLocationSasToken')))]",
         "storageAccountId": "[resourceId(parameters('storageRG'), 'Microsoft.Storage/storageAccounts/', parameters('storageName'))]",
         "PubIpId": "[resourceId(parameters('publicIpRG'),'Microsoft.Network/publicIPAddresses',parameters('publicIpName'))]"
     },
