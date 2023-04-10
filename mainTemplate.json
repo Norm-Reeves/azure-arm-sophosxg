@@ -246,7 +246,7 @@
         }
     },
     "variables": {
-        "publicIpTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg/nestedtemplates/publicip-new.json', parameters('_artifactsLocationSasToken')))]",
+        "publicIpTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg/', concat('nestedtemplates/publicip-new.json', parameters('_artifactsLocationSasToken')))]",
         "netTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg/nestedtemplates/vnet-new.json', parameters('_artifactsLocationSasToken')))]",
         "storageTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg/nestedtemplates/storageAccount-new.json', parameters('_artifactsLocationSasToken')))]",
         "availabilitySetTemplate": "[uri(parameters('https://github.com/Norm-Reeves/azure-sophos-xg/nestedtemplates/availabilitySet-new.json', parameters('_artifactsLocationSasToken')))]",
