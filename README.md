@@ -30,5 +30,6 @@ Change Log:
 ============
 0.0:
   • Mirrored source (https://github.com/sophos-iaas/xg-azure/) and confirmed working.
+  
 0.1
   • 
