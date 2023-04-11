@@ -1,12 +1,12 @@
 # azure-sophos-xg
 Deployment template to deploy Sophos XG firewall to Azure.
 
-Modified source (https://github.com/sophos-iaas/xg-azure/) for static private ip assignments (for routing tables) and removal of availability set (not needed for our use case since we have Active-Active set in different regions).
+Mirrored source (https://github.com/sophos-iaas/xg-azure/) and confirmed working. Will make later versions not create an unused availbility set and also set static private IPs on NICs.
 
 Deploying
 =========
 
-1.) Open template link: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FNorm-Reeves%2Fazure-sophos-xg%2Fmaster%2FmainTemplate.json
+1.) Open template link: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FNorm-Reeves%2Fazure-sophos-xg%2F1.0%2FmainTemplate.json
 
 2.) Upload (and modify if needed) parameters.json. Take a look on the example values for template parameters in `mainTemplateParameters.json`.
 
@@ -24,3 +24,9 @@ Connect to the VM instance
 Reference for Full Setup
 ============
 https://community.sophos.com/sophos-xg-firewall/f/recommended-reads/124683/sophos-firewall-reference-architecture-on-azure-with-dual-nic
+
+
+Change Log:
+============
+1.0:
+  • Mirrored source (https://github.com/sophos-iaas/xg-azure/) and confirmed working.
