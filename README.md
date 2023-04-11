@@ -6,7 +6,7 @@ Mirrored source (https://github.com/sophos-iaas/xg-azure/) and confirmed working
 Deploying
 =========
 
-1.) Open template link: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FNorm-Reeves%2Fazure-sophos-xg%2F1.0%2FmainTemplate.json
+1.) Open template link: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FNorm-Reeves%2Fazure-sophos-xg%2F0.0%2FmainTemplate.json
 
 2.) Upload (and modify if needed) parameters.json. Take a look on the example values for template parameters in `mainTemplateParameters.json`.
 
