@@ -14,9 +14,6 @@
         "imageSku": {
             "type": "string"
         },
-        "availabilitySetId": {
-            "type": "string"
-        },
         "storageAccountEndpoint": {
             "type": "string"
         },
@@ -47,9 +44,6 @@
             },
             "location": "[parameters('location')]",
             "properties": {
-                "availabilitySet": {
-                    "id": "[parameters('availabilitySetId')]"
-                },
                 "hardwareProfile": {
                     "vmSize": "[parameters('vmSize')]"
                 },
