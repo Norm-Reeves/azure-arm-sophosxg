@@ -34,4 +34,4 @@ Change Log:
   
 0.1:
 
-  •
+  • Removed unused Availabilty Set from deployment.
