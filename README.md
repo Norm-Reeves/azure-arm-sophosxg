@@ -28,5 +28,7 @@ https://community.sophos.com/sophos-xg-firewall/f/recommended-reads/124683/sopho
 
 Change Log:
 ============
-1.0:
+0.0:
   • Mirrored source (https://github.com/sophos-iaas/xg-azure/) and confirmed working.
+0.1
+  • 
