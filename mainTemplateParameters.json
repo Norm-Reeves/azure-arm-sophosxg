@@ -71,12 +71,24 @@
     "storageType": {
       "value": "Standard_LRS"
     },
-    "nicWan": {
-      "value": "PortB"
-    },
-    "nicLan": {
-      "value": "PortA"
-    },
+	"nicWanName": {
+		"value": "PortB"
+	},
+	"nicWanPrivateIpType": {
+		"value": "Dynamic"
+	},
+	"nicWanPrivateIpAddress": {
+		"value": ""
+	},
+	"nicLanName": {
+		"value": "PortA"
+	},
+	"nicLanPrivateIpType": {
+		"value": "Dynamic"
+	},
+	"nicLanPrivateIpAddress": {
+		"value": ""
+	},
     "networkSecurityGroupNewOrExisting": {
       "value": "new"
     },
