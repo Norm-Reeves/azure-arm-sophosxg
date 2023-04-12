@@ -5,6 +5,12 @@
         "interfaceName": {
             "type": "string"
         },
+        "interfaceType": {
+            "type": "string"
+        },
+        "interfacePrivateIP": {
+            "type": "string"
+        },
         "subnetRef": {
             "type": "string"
         },
@@ -23,7 +29,8 @@
                     {
                         "name": "ipconfig",
                         "properties": {
-                            "privateIPAllocationMethod": "Dynamic",
+                            "privateIPAllocationMethod": "[parameters('interfaceType')]",
+                            "privateIPAddress": "[parameters('interfacePrivateIP')]",
                             "subnet": {
                                 "id": "[parameters('subnetRef')]"
                             }
