@@ -212,6 +212,24 @@
                 "description": "Network Interface Name for LAN Zone"
             }
         },
+        "nicLanPrivateIpType": {
+            "type": "string",
+            "allowedValues": [
+                "Dynamic",
+                "Static"
+            ],            
+            "defaultValue": "Dynamic",
+            "metadata": {
+                "description": "Allocation method of the private ip for lan nic"
+            }
+        },
+        "nicLanPrivateIpAddress": {
+            "type": "string",
+			"defaultValue": "",
+            "metadata": {
+                "description": "Private IP address for lan nic. Leave empty string if nicWanPrivateIpType is dynamic."
+            }
+        },
         "networkSecurityGroupNewOrExisting": {
             "type": "string",
             "defaultValue": "new",
