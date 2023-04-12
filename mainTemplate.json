@@ -205,7 +205,7 @@
                 "description": "Private IP address for wan nic. Leave empty string if nicWanPrivateIpType is dynamic."
             }
         },
-        "nicLan": {
+        "nicLanName": {
             "type": "string",
             "defaultValue": "PortA",
             "metadata": {
