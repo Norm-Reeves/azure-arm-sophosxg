@@ -418,13 +418,12 @@
                     "interfaceName": {
                         "value": "[parameters('nicWanName')]"
                     },
-					        },
-					"interfaceType": {
-						"value": "[parameters('nicWanPrivateIpType')]"
-					},
-					"interfacePrivateIP": {
-						"value": "[parameters('nicWanPrivateIpAddress')]"
-					},
+					          "interfaceType": {
+						            "value": "[parameters('nicWanPrivateIpType')]"
+					          },
+					          "interfacePrivateIP": {
+						            "value": "[parameters('nicWanPrivateIpAddress')]"
+					          },
                     "subnetRef": {
                         "value": "[resourceId(parameters('netRG'),'Microsoft.Network/virtualNetworks/subnets',parameters('netName'), parameters('wanName'))]"
                     },
@@ -455,8 +454,14 @@
                 },
                 "parameters": {
                     "interfaceName": {
-                        "value": "[parameters('nicLan')]"
+                        "value": "[parameters('nicLanName')]"
                     },
+					"interfaceType": {
+						"value": "[parameters('nicLanPrivateIpType')]"
+					},
+					"interfacePrivateIP": {
+						"value": "[parameters('nicLanPrivateIpAddress')]"
+					},
                     "subnetRef": {
                         "value": "[resourceId(parameters('netRG'),'Microsoft.Network/virtualNetworks/subnets',parameters('netName'), parameters('lanName'))]"
                     },
