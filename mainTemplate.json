@@ -180,18 +180,54 @@
                 "description": "Replication mode for Storage Account."
             }
         },
-        "nicWan": {
+        "nicWanName": {
             "type": "string",
             "defaultValue": "PortB",
             "metadata": {
                 "description": "Network Interface Name for WAN Zone"
             }
         },
-        "nicLan": {
+        "nicWanPrivateIpType": {
+            "type": "string",
+            "allowedValues": [
+                "Dynamic",
+                "Static"
+            ],            
+            "defaultValue": "Dynamic",
+            "metadata": {
+                "description": "Allocation method of the private ip for wan nic"
+            }
+        },
+        "nicWanPrivateIpAddress": {
+            "type": "string",
+			"defaultValue": "",
+            "metadata": {
+                "description": "Private IP address for wan nic. Leave empty string if nicWanPrivateIpType is dynamic."
+            }
+        },
+        "nicLanName": {
             "type": "string",
             "defaultValue": "PortA",
             "metadata": {
                 "description": "Network Interface Name for LAN Zone"
+            }
+        },
+        "nicLanPrivateIpType": {
+            "type": "string",
+            "allowedValues": [
+                "Dynamic",
+                "Static"
+            ],            
+            "defaultValue": "Dynamic",
+            "metadata": {
+                "description": "Allocation method of the private ip for lan nic"
+            }
+        },
+        "nicLanPrivateIpAddress": {
+            "type": "string",
+			"defaultValue": "",
+            "metadata": {
+                "description": "Private IP address for lan nic. Leave empty string if nicLanPrivateIpType is dynamic."
             }
         },
         "networkSecurityGroupNewOrExisting": {
@@ -380,8 +416,15 @@
                 },
                 "parameters": {
                     "interfaceName": {
-                        "value": "[parameters('nicWan')]"
+                        "value": "[parameters('nicWanName')]"
                     },
+					        },
+					"interfaceType": {
+						"value": "[parameters('nicWanPrivateIpType')]"
+					},
+					"interfacePrivateIP": {
+						"value": "[parameters('nicWanPrivateIpAddress')]"
+					},
                     "subnetRef": {
                         "value": "[resourceId(parameters('netRG'),'Microsoft.Network/virtualNetworks/subnets',parameters('netName'), parameters('wanName'))]"
                     },
@@ -396,7 +439,7 @@
                     }
                 }
             }
-        },
+        },		
         {
             "name": "SettingUpInterfaceLan",
             "type": "Microsoft.Resources/deployments",
