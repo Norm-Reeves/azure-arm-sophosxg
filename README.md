@@ -1,7 +1,7 @@
 # azure-sophos-xg
 Deployment template to deploy Sophos XG firewall to Azure.
 
-Mirrored source (https://github.com/sophos-iaas/xg-azure/) and confirmed working. Will make later versions not create an unused availbility set and also set static private IPs on NICs.
+Mirrored source (https://github.com/sophos-iaas/xg-azure/) and modified to not create an unused availbility set. Next version will also set static private IPs on NICs.
 
 Deploying
 =========
