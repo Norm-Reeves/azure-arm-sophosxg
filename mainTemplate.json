@@ -400,7 +400,6 @@
                     "interfaceName": {
                         "value": "[parameters('nicWanName')]"
                     },
-					        },
 					"interfaceType": {
 						"value": "[parameters('nicWanPrivateIpType')]"
 					},
