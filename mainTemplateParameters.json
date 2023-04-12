@@ -86,12 +86,6 @@
     "trustedNetwork": {
       "value": "*"
     },
-    "availabilitySetNewOrExisting": {
-      "value": "new"
-    },
-    "availabilitySetName": {
-      "value": "AvailabilitySet"
-    },
     "location": {
       "value": "[resourceGroup().location]"
     }
