@@ -227,7 +227,7 @@
             "type": "string",
 			"defaultValue": "",
             "metadata": {
-                "description": "Private IP address for lan nic. Leave empty string if nicWanPrivateIpType is dynamic."
+                "description": "Private IP address for lan nic. Leave empty string if nicLanPrivateIpType is dynamic."
             }
         },
         "networkSecurityGroupNewOrExisting": {
@@ -418,12 +418,12 @@
                     "interfaceName": {
                         "value": "[parameters('nicWanName')]"
                     },
-					"interfaceType": {
-						"value": "[parameters('nicWanPrivateIpType')]"
-					},
-					"interfacePrivateIP": {
-						"value": "[parameters('nicWanPrivateIpAddress')]"
-					},
+					          "interfaceType": {
+						            "value": "[parameters('nicWanPrivateIpType')]"
+					          },
+					          "interfacePrivateIP": {
+						            "value": "[parameters('nicWanPrivateIpAddress')]"
+					          },
                     "subnetRef": {
                         "value": "[resourceId(parameters('netRG'),'Microsoft.Network/virtualNetworks/subnets',parameters('netName'), parameters('wanName'))]"
                     },
